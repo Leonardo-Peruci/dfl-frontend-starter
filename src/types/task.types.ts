@@ -1,5 +1,5 @@
 export interface Task {
     id: string;
     title: string;
-    status: string;
+    phase: "a-fazer" | "fazendo" | "feito";
 }
