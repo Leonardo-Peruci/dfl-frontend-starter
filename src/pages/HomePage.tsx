@@ -28,6 +28,12 @@ export default function HomePage() {
           description="Leitura sem paginação — ideal para Todo, galeria e listas pequenas."
         />
         <HubCard
+          title="Lista de Tarefas"
+          badge="Lista simples"
+          to="/exemplo-task"
+          description="useState + useEffect + dummy na página. Loading, lista vazia e lista com dados."
+        />
+        <HubCard
           title="Estado local (useState)"
           to="/exemplo-estado-local"
           description="Contraste entre UI state e server state do React Query."

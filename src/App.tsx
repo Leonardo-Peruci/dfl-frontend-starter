@@ -11,6 +11,7 @@ import ProductDetailPage from "@/pages/ProductDetailPage";
 import ProductsPage from "@/pages/ProductsPage";
 import RestrictedAreaPage from "@/pages/RestrictedAreaPage";
 import SuppliersPage from "@/pages/SuppliersPage";
+import  TaskPage  from "./pages/TaskPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,6 +36,7 @@ export default function App() {
                   <Route path="/exemplo-detalhe/:id" element={<ProductDetailPage />} />
                   <Route path="/exemplo-lista-simples" element={<SuppliersPage />} />
                   <Route path="/exemplo-estado-local" element={<LocalStateExamplePage />} />
+                  <Route path="/exemplo-task" element={<TaskPage />} />
                   <Route element={<ProtectedRoute />}>
                     <Route path="/area-restrita" element={<RestrictedAreaPage />} />
                   </Route>
