@@ -6,24 +6,24 @@ import { ArrowLeftIcon, Loader2 } from "lucide-react"
 import { Link } from "react-router-dom";
 import TaskList from "@/components/todo/TaskList";
 
-const delay = () => new Promise((resolve) => setTimeout(resolve, 3000));
+function wait(ms: number){
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 export default function TaskPage(){
     const [tasks, setTasks] = useState<Task[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
-    const loadTasks = async () => {
-        try {
-            setLoading(true);
-            await delay();
-            setTasks([ ...taskExampleData ]);
-        } catch (error){
-            console.error(error);
-        } finally{
-            setLoading(false);
-        }
-    };
     useEffect(() => {
-        void loadTasks();
+        async function loadTasks(){
+            setLoading(true);
+            try {
+                await wait(1500);
+                setTasks(taskExampleData);
+            } finally {
+                setLoading(false); 
+            }
+        }
+        loadTasks();
     }, []);
     return(
         <main className="space-y-4">
