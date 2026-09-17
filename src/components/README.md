@@ -10,7 +10,8 @@ components/
 ├── layout/       # Shell da app — header, layout, hub
 ├── auth/         # Rotas protegidas, UI de login
 ├── products/     # Só domínio "produtos"
-└── suppliers/    # Só domínio "fornecedores"
+├── suppliers/    # Só domínio "fornecedores"
+└── movies/       # Exemplo da aula — CRUD sem React Query
 ```
 
 **Regra prática:**
@@ -49,6 +50,7 @@ Páginas **montam**; componentes **renderizam** e **disparam callbacks**.
 | `auth/` | `ProtectedRoute`, `RestrictedLoginPanel` |
 | `products/` | `ProductList`, `ProductCard`, `ProductForm`, `ProductFilters`, `ProductEditDialog` |
 | `suppliers/` | `SupplierList`, `SupplierCard` |
+| `movies/` | `MovieList`, `MovieCard` — exemplo da aula (hook sem React Query) |
 
 ## Padrões de UX
 

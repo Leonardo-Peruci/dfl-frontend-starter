@@ -15,7 +15,7 @@ Ideal para quem está aprendendo React profissional ou iniciando um projeto sem 
 ## Começar
 
 ```bash
-git clone <url-do-repo> meu-projeto
+git clone https://github.com/Alexandremma/dfl-frontend-starter.git meu-projeto
 cd meu-projeto
 npm install
 ```
@@ -38,14 +38,16 @@ Abra [http://localhost:5173](http://localhost:5173) — a home é um **hub** com
 
 ## Exemplos incluídos
 
-| Rota                     | O que demonstra                                              |
-| ------------------------ | ------------------------------------------------------------ |
-| `/`                      | Hub + login demo + toggle tema + avatar no header            |
-| `/exemplo-crud`          | CRUD com filtros, paginação, **dialog ao editar**            |
-| `/exemplo-detalhe/:id`   | Detalhe com `useGetProduct` (link **Ver detalhe** no card)   |
-| `/exemplo-lista-simples` | Lista de fornecedores sem paginação                          |
-| `/exemplo-estado-local`  | `useState` vs server state (React Query)                     |
-| `/area-restrita`         | `ProtectedRoute` + Context de autenticação                   |
+| Rota                     | O que demonstra                                               |
+| ------------------------ | ------------------------------------------------------------- |
+| `/`                      | Hub + login demo + toggle tema + avatar no header             |
+| `/exemplo-crud`          | CRUD com filtros, paginação, **dialog ao editar**             |
+| `/exemplo-detalhe/:id`   | Detalhe com `useGetProduct` (link **Ver detalhe** no card)    |
+| `/exemplo-lista-simples` | Lista de fornecedores sem paginação                           |
+| `/exemplo-filmes`        | Passo 1: filmes com `useState` + `useEffect` na página        |
+| `/filmes`                | Passo 2: CRUD com service + `useMovies` (**sem React Query**) |
+| `/exemplo-estado-local`  | `useState` vs server state (React Query)                      |
+| `/area-restrita`         | `ProtectedRoute` + Context de autenticação                    |
 
 ## Estrutura de pastas
 

@@ -33,6 +33,7 @@ Exceção: AuthContext importa demoUser para o stub de login.
 | ------- | ------- | ------ |
 | `products.dummy.ts` | **API** (snake_case) | Simula payload real → passa pelo `mapper/` |
 | `suppliers.dummy.ts` | **Domínio** (camelCase) | Lista simples; payload já igual ao type `Supplier` |
+| `movies.dummy.ts` | **Domínio** (camelCase) | CRUD da aula; array mutável em memória |
 
 ## Usuário demo
 

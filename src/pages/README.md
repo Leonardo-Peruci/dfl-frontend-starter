@@ -4,11 +4,11 @@ Uma **página por rota** — orquestram hooks, estado de tela e montam component
 
 ## Responsabilidade
 
-| Faz | Não faz |
-| --- | ------- |
-| Chama hooks (`useGetProducts`, mutations) | Estilizar cada campo do formulário |
-| Decide qual view mostrar (lista vs create vs erro) | Chamar `services/` direto |
-| Passa dados e callbacks para componentes | Lógica reutilizável (vai para `hooks/`) |
+| Faz                                                | Não faz                                 |
+| -------------------------------------------------- | --------------------------------------- |
+| Chama hooks (`useGetProducts`, mutations)          | Estilizar cada campo do formulário      |
+| Decide qual view mostrar (lista vs create vs erro) | Chamar `services/` direto               |
+| Passa dados e callbacks para componentes           | Lógica reutilizável (vai para `hooks/`) |
 
 ```txt
 pages/ProductsPage.tsx
@@ -19,15 +19,17 @@ components/products/ProductList.tsx
 
 ## Páginas neste projeto
 
-| Rota | Arquivo | Padrão demonstrado |
-| ---- | ------- | ------------------ |
-| `/` | `HomePage.tsx` | Hub + links para exemplos |
-| `/exemplo-crud` | `ProductsPage.tsx` | CRUD + filtros + paginação + dialog |
-| `/exemplo-detalhe/:id` | `ProductDetailPage.tsx` | `useGetProduct` — busca por id |
-| `/exemplo-lista-simples` | `SuppliersPage.tsx` | Lista read-only |
-| `/exemplo-estado-local` | `LocalStateExamplePage.tsx` | `useState` vs server state |
-| `/area-restrita` | `RestrictedAreaPage.tsx` | Rota protegida |
-| `*` | `NotFound.tsx` | 404 |
+| Rota                     | Arquivo                     | Padrão demonstrado                              |
+| ------------------------ | --------------------------- | ----------------------------------------------- |
+| `/`                      | `HomePage.tsx`              | Hub + links para exemplos                       |
+| `/exemplo-crud`          | `ProductsPage.tsx`          | CRUD + filtros + paginação + dialog             |
+| `/exemplo-detalhe/:id`   | `ProductDetailPage.tsx`     | `useGetProduct` — busca por id                  |
+| `/exemplo-lista-simples` | `SuppliersPage.tsx`         | Lista read-only                                 |
+| `/exemplo-filmes`        | `MoviesExamplePage.tsx`     | Passo 1: dados na página (sem service/hook)     |
+| `/filmes`                | `MoviesPage.tsx`            | Passo 2: CRUD com `useMovies` (sem React Query) |
+| `/exemplo-estado-local`  | `LocalStateExamplePage.tsx` | `useState` vs server state                      |
+| `/area-restrita`         | `RestrictedAreaPage.tsx`    | Rota protegida                                  |
+| `*`                      | `NotFound.tsx`              | 404                                             |
 
 ## Regras
 

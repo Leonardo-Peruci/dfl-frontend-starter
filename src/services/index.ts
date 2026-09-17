@@ -7,3 +7,10 @@ export {
   deleteProduct,
 } from "./products.service";
 export { getSuppliers } from "./suppliers.service";
+export {
+  getMovies,
+  getMovieById,
+  createMovie,
+  updateMovie,
+  deleteMovie,
+} from "./movies.service";

@@ -20,7 +20,7 @@ Componente  →  hook (useGetProducts)  →  service (getProducts)
                                          retorna Promise<Product>
 ```
 
-**Regra de ouro:** componentes **nunca** chamam `services/` direto — sempre via `hooks/` + React Query.
+**Regra de ouro:** componentes **nunca** chamam `services/` direto — sempre via `hooks/` (React Query **ou** hook manual como `useMovies`).
 
 ## Regras
 
@@ -31,14 +31,18 @@ Componente  →  hook (useGetProducts)  →  service (getProducts)
 
 ## Produtos — dois padrões de listagem
 
-| Função | Retorno | Uso |
-| ------ | ------- | --- |
-| `getProducts(params)` | `PaginatedResponse<Product>` | Tabela com filtros e paginação (`/exemplo-crud`) |
-| `getAllProducts()` | `Product[]` | Select no formulário (lista completa, sem paginar) |
+| Função                | Retorno                      | Uso                                                |
+| --------------------- | ---------------------------- | -------------------------------------------------- |
+| `getProducts(params)` | `PaginatedResponse<Product>` | Tabela com filtros e paginação (`/exemplo-crud`)   |
+| `getAllProducts()`    | `Product[]`                  | Select no formulário (lista completa, sem paginar) |
 
 ## Fornecedores — lista simples
 
 `getSuppliers()` → `Supplier[]` — todo de uma vez, sem paginação (ver `/exemplo-lista-simples`).
+
+## Filmes — CRUD da aula (sem React Query)
+
+`movies.service.ts` — `getMovies`, `createMovie`, `updateMovie`, `deleteMovie`. Consumido por `useMovies` (`useState` + refetch manual). Ver `/filmes`.
 
 ## Quando integrar API real
 

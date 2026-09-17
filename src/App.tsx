@@ -6,6 +6,8 @@ import { ErrorBoundary } from "@/components/ui";
 import { AuthProvider, ThemeProvider } from "@/contexts";
 import HomePage from "@/pages/HomePage";
 import LocalStateExamplePage from "@/pages/LocalStateExamplePage";
+import MoviesExamplePage from "@/pages/MoviesExamplePage";
+import MoviesPage from "@/pages/MoviesPage";
 import NotFound from "@/pages/NotFound";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import ProductsPage from "@/pages/ProductsPage";
@@ -35,6 +37,8 @@ export default function App() {
                   <Route path="/exemplo-crud" element={<ProductsPage />} />
                   <Route path="/exemplo-detalhe/:id" element={<ProductDetailPage />} />
                   <Route path="/exemplo-lista-simples" element={<SuppliersPage />} />
+                  <Route path="/exemplo-filmes" element={<MoviesExamplePage />} />
+                  <Route path="/filmes" element={<MoviesPage />} />
                   <Route path="/exemplo-estado-local" element={<LocalStateExamplePage />} />
                   <Route path="/exemplo-task" element={<TaskPage />} />
                   <Route element={<ProtectedRoute />}>
