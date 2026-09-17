@@ -45,10 +45,6 @@ export default function TaskPage(){
                     <Loader2 className="h-4 w-4 animate-spin" />
                     <p  className="text-gray-500">Carregando... </p>
                 </div>
-            ): tasks.length === 0 ? (
-                <div className="flex h-full items-center justify-center">
-                    <p className="text-gray-500">Nenhuma tarefa encontrada.</p>
-                </div>
             ): (
                 <TaskList task={tasks} />
             )}
