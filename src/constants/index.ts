@@ -4,5 +4,6 @@ export {
   PRODUCT_CATEGORY_LABELS,
   PRODUCT_CATEGORY_FILTER_OPTIONS,
 } from "./product-category.constants";
+export { MOVIE_STATUS_LABELS } from "./movie-status.constants";
 export { THEME_STORAGE_KEY } from "./theme.constants";
 export type { Theme } from "./theme.constants";
